@@ -1,0 +1,100 @@
+/* Reset base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif; /* Poi sceglieremo un font più artistico */
+  background-color: #f9f9f9; /* Sfondo leggermente off-white, molto pulito */
+  color: #333;
+}
+
+/* Struttura Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%; /* 10% di spazio ai lati per non far attaccare il testo ai bordi dello schermo */
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea; /* Una linea sottile ed elegante sotto la nav */
+}
+
+.logo h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.logo .subtitle {
+  font-size: 0.8rem;
+  color: #888;
+  text-transform: uppercase;
+}
+
+/* Link di navigazione */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px; /* Spazio fisso tra un link e l'altro */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+/* Effetto quando passi sopra con il mouse o se la pagina è attiva */
+.nav-links a:hover,
+.nav-links a.active {
+  color: #000; /* Il testo diventa nero pieno */
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px 10%;
+  gap: 20px;
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;   /* Dispone gli elementi in verticale (titolo, poi testo, poi bottone) */
+  justify-content: center;  /* Centra verticalmente tutto il blocco rispetto all'immagine di destra */
+  gap: 20px;                /* Gestisce lo spazio tra gli elementi in modo perfetto */
+}
+
+.hero-left, .hero-right {
+  flex: 1;
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 400px; /* Un'altezza fissa per ora, così lo vedi bene */
+  background-color: #e0e0e0; /* Un grigio neutro da wireframe */
+  border-radius: 4px; /* Un pizzico di smussatura agli angoli che fa sempre figura */
+  margin-bottom: 10px; /* Stacca l'immagine dalla didascalia sotto */
+}
+
+.img-caption {
+  font-style: italic;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.hero-btn {
+  display: inline-block; /* Fondamentale! Permette al link di comportarsi come un box e accettare padding e margini */
+  align-self: flex-start;   /* TRUCCHETTO: Impedisce al bottone di allargarsi per tutta la larghezza della colonna */
+  background-color: #3882f6;
+  color: #f9faf8;
+  text-decoration: none; /* Toglie la sottolineatura nativa del link */
+  border-radius: 20px;
+  padding: 10px 25px;    /* 10px sopra/sotto, 25px destra/sinistra per farlo più proporzionato */
+  cursor: pointer;       /* Forza la manina anche se è già un link, per sicurezza */
+}
+
