@@ -85,6 +85,7 @@ body {
   font-style: italic;
   color: #666;
   font-size: 0.9rem;
+  margin-top: 15px; /* Crea un elegante stacco tra la cornice e il testo dell'opera */
 }
 
 .hero-btn {
@@ -98,3 +99,94 @@ body {
   cursor: pointer;       /* Forza la manina anche se è già un link, per sicurezza */
 }
 
+.sardinian_horse {
+  width: 100%;        /* Prende tutta la larghezza della sua scatola genitore */
+  max-width: 550px;   /* Ma non supera mai i 550px per non diventare gigante */
+  height: auto;       /* Mantiene le proporzioni perfette */
+  display: block;     /* Evita piccoli spazi vuoti fastidiosi sotto l'immagine */
+  
+  /* L'effetto cornice dorata (Bordo + Spazio Bianco + Ombra) */
+  border: 2px solid #d4af37;   /* Linea color oro */
+  padding: 5px;                /* Effetto passpartout bianco */
+  background-color: #ffffff;   /* Sfondo del passpartout */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Ombra morbida sotto il quadro */
+}
+
+/* --- EFFETTO LENTE D'INGRANDIMENTO --- */
+
+/* La scatola che fa da ancora per la lente */
+.img-container {
+  position: relative;
+  display: inline-block; /* Si stringe attorno alla foto */
+}
+
+/* Stile della lente (inizialmente nascosta) */
+.zoom-icon {
+  position: absolute;
+  bottom: 20px;  /* Distanza dal fondo interna alla cornice */
+  right: 20px;   /* Distanza dal bordo destro interna alla cornice */
+  background-color: rgba(0, 0, 0, 0.6); /* Sfondo scuro semitrasparente */
+  color: #ffffff;
+  padding: 8px 10px;
+  border-radius: 50%; /* Diventa un cerchio perfetto */
+  font-size: 1.1rem;
+  cursor: pointer;
+  opacity: 0; /* Invisibile all'inizio */
+  transition: opacity 0.3s ease; /* Transizione fluida */
+}
+
+/* Quando passi il mouse sulla foto, fai apparire la lente! */
+.img-container:hover .zoom-icon {
+  opacity: 1;
+}
+
+/* Stile della sezione galleria */
+.gallery-section {
+  padding: 60px 0;
+  text-align: center; /* Centra il titolo "Opere in Evidenza" */
+}
+
+.gallery-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px; /* Spazio tra il titolo e le card sotto */
+}
+
+/* Il motore Flexbox: mette le card in riga */
+.cards-container {
+  display: flex;
+  justify-content: space-between; /* Distribuisce le card lungo tutta la larghezza */
+  gap: 20px; /* Crea uno spazio fisso di 20px tra una card e l'altra */
+}
+
+/* Stile della singola card (la scatola bianca) */
+.card {
+  flex: 1; /* Dice alle card di dividersi lo spazio in parti perfettamente uguali */
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb; /* Un bordino leggerissimo grigio */
+  border-radius: 8px;
+  overflow: hidden; /* Taglia l'immagine se esce dai bordi arrotondati della card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Un'ombreggiatura sfumata stupenda */
+}
+
+/* Diamo la stessa forma a tutte le immagini delle card */
+.card-img {
+  width: 100%;
+  height: 200px; /* Forza tutte le immagini ad avere la stessa altezza */
+  object-fit: cover; /* TRUCCO: Ritaglia l'immagine proporzionalmente senza schiacciarla! */
+}
+
+/* Lo spazio per il testo dentro la card */
+.card-info {
+  padding: 15px;
+  text-align: left; /* Allinea il titolo del quadro a sinistra */
+}
+
+.card-info h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.card-info p {
+  color: #6b7280; /* Grigio più scuro e delicato per la tecnica */
+  font-size: 0.9rem;
+}
