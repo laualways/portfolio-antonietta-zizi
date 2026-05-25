@@ -6,9 +6,9 @@
 }
 
 body {
-  font-family: sans-serif; /* Poi sceglieremo un font più artistico */
+  font-family: sans-serif; /* Mantenuto il font originale di sistema */
   background-color: #f9f9f9; /* Sfondo leggermente off-white, molto pulito */
-  color: #333;
+  color: #333333;
 }
 
 /* Struttura Navbar */
@@ -29,7 +29,7 @@ body {
 
 .logo .subtitle {
   font-size: 0.8rem;
-  color: #888;
+  color: #888888;
   text-transform: uppercase;
 }
 
@@ -42,7 +42,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #555;
+  color: #555555;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -50,9 +50,10 @@ body {
 /* Effetto quando passi sopra con il mouse o se la pagina è attiva */
 .nav-links a:hover,
 .nav-links a.active {
-  color: #000; /* Il testo diventa nero pieno */
+  color: #000000; /* Il testo diventa nero pieno */
 }
 
+/* Sezione Hero principale */
 .hero {
   display: flex;
   justify-content: space-between;
@@ -79,6 +80,7 @@ body {
   align-items: flex-end;    /* Spinge entrambi gli elementi verso il bordo destro della pagina */
 }
 
+/* Fallback grafico per la fase di sviluppo wireframe */
 .image-placeholder {
   width: 100%;
   height: 400px; /* Un'altezza fissa per ora, così lo vedi bene */
@@ -94,7 +96,7 @@ body {
 
 .img-caption {
   font-style: italic;
-  color: #666;
+  color: #666666;
   font-size: 0.9rem;
   margin-top: 15px; /* Crea un elegante stacco tra la cornice e il testo dell'opera */
 }
@@ -102,7 +104,7 @@ body {
 .sardinian_horse {
   width: 100%;        /* Prende tutta la larghezza della sua scatola genitore */
   max-width: 550px;   /* Ma non supera mai i 550px per non diventare gigante */
-  height: auto;       /* Mantiene le proporzioni perfeette */
+  height: auto;       /* Mantiene le proporzioni perfette */
   display: block;     /* Evita piccoli spazi vuoti fastidiosi sotto l'immagine */
   
   /* L'effetto cornice dorata (Bordo + Spazio Bianco + Ombra) */
@@ -135,7 +137,7 @@ body {
   transition: opacity 0.3s ease; /* Transizione fluida */
 }
 
-/* Quando passi il mouse sulla foto, fai apparire la lente! */
+/* Quando passi il mouse sulla foto, fai apparire la lente */
 .img-container:hover .zoom-icon {
   opacity: 1;
 }
@@ -172,7 +174,7 @@ body {
 .card-img {
   width: 100%;
   height: 200px; /* Forza tutte le immagini ad avere la stessa altezza */
-  object-fit: cover; /* TRUCCO: Ritaglia l'immagine proporzionalmente senza schiacciarla! */
+  object-fit: cover; /* TRUCCO: Ritaglia l'immagine proporzionalmente senza schiacciarla */
 }
 
 /* Lo spazio per il testo dentro la card */
@@ -212,7 +214,7 @@ body {
 /* Effetto quando passi il mouse sul bottone */
 .btn-secondary:hover {
   background-color: #333333;
-  color: #ffffff; /* Inverte i colori! */
+  color: #ffffff; /* Inverte i colori */
 }
 
 /* Stile della sezione stampa */
@@ -228,7 +230,7 @@ body {
 }
 
 .press-subtitle {
-  color: #666;
+  color: #666666;
   font-style: italic;
   margin-bottom: 40px;
 }
@@ -246,7 +248,7 @@ body {
   background-color: #ffffff;
   padding: 25px;
   border-radius: 6px;
-  text-decoration: none; /* Toglie la sottolineatura brutta dei link */
+  text-decoration: none; /* Toglie la sottolineatura dei link */
   color: #333333;
   text-align: left;
   display: flex;
@@ -267,7 +269,7 @@ body {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #3d2a1d; /* MODIFICATO: Inserito marrone testa di moro al posto del blu */
+  color: #3d2a1d; /* Inserito marrone testa di moro al posto del blu */
   font-weight: 600;
   margin-bottom: 10px;
 }
@@ -311,19 +313,15 @@ body {
 }
 
 /* ==========================================================================
-   PAGINA BIOGRAFIA - NUOVO LAYOUT (Zoom Safe, Bilanciamento e Allineamenti)
+   PAGINA BIOGRAFIA - LAYOUT (Larghezza Home + Foto Bloccata)
    ========================================================================== */
 
-/* ==========================================================================
-   PAGINA BIOGRAFIA - NUOVO LAYOUT (Larghezza Home + Foto Bloccata)
-   ========================================================================== */
-
+/* Wrapper Zoom-Safety per impedire la dispersione dei testi su grandi schermi */
 .page-container {
   width: 100%;
   max-width: 100%;          /* Si allarga al 100% dello schermo come la Home */
   margin: 0 auto;
   padding: 0 10%;           /* Allineamento perfetto al 10% identico alla Navbar */
-  box-sizing: border-box;
 }
 
 .bio-hero-section {
@@ -345,7 +343,7 @@ body {
   font-size: 2.6rem;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #111;
+  color: #111111;
 }
 
 .bio-subtitle-lead {
@@ -355,6 +353,7 @@ body {
   letter-spacing: 1px;
 }
 
+/* Blocco citazione impostato per riempire il vuoto grafico a fianco della foto */
 .hero-statement {
   background-color: #faf9f6; /* Colore avorio di sfondo per il blocco citazione */
   padding: 30px;
@@ -365,7 +364,7 @@ body {
   font-size: 1.15rem;
   font-style: italic;
   line-height: 1.6;
-  color: #333;
+  color: #333333;
   margin: 0 0 15px 0;
 }
 
@@ -373,10 +372,11 @@ body {
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #666;
+  color: #666666;
   font-weight: 600;
 }
 
+/* Gestione colonna sensibile allo zoom */
 .bio-hero-image {
   flex-shrink: 0;           /* Blocca il restringimento o l'allargamento anomalo */
   width: 350px;             /* FISSO: Impedisce alla foto di diventare gigantesca a tutto schermo */
@@ -387,7 +387,7 @@ body {
 .bio-hero-image .img-container {
   border: 2px solid #d4af37; /* Cornice dorata attorno alla foto profilo */
   padding: 6px;
-  background-color: #fff;
+  background-color: #ffffff;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
   width: 100%;
 }
@@ -398,29 +398,31 @@ body {
   height: auto;
 }
 
+/* Spaziatura per la biografia testuale sotto la foto */
 .bio-narrative-section {
-  padding: 30px 0 50px 0;   /* NUOVO: Spaziatura per la biografia testuale sotto la foto */
+  padding: 30px 0 50px 0;   
   border-bottom: 1px solid #eaeaea;
 }
 
 .bio-paragraph {
   font-size: 1.1rem;
   line-height: 1.75;
-  color: #333;
+  color: #333333;
   margin-bottom: 25px;
-  text-align: justify;      /* NUOVO: Forza l'allineamento giustificato per effetto monografia */
+  text-align: justify;      /* Forza l'allineamento giustificato per effetto monografia */
 }
 
+/* Sezione del Curriculum Artistico */
 .cv-section {
-  padding: 60px 0;          /* NUOVO: Riposizionato e distanziato verticalmente */
+  padding: 60px 0;          /* Riposizionato e distanziato verticalmente */
 }
 
 .cv-section h2 {
   font-size: 2.2rem;
   font-weight: 600;
   margin-bottom: 40px;
-  color: #3d2a1d;           /* MODIFICATO: Colore marrone testa di moro per il titolo del CV */
-  border-bottom: 2px solid #3d2a1d; /* MODIFICATO: Sottolineatura color marrone coerente */
+  color: #3d2a1d;           /* Colore marrone testa di moro per il titolo del CV */
+  border-bottom: 2px solid #3d2a1d; /* Sottolineatura color marrone coerente */
   padding-bottom: 15px;
 }
 
@@ -431,14 +433,14 @@ body {
 .cv-category h3 {
   font-size: 1.4rem;
   font-weight: 600;
-  color: #111;
+  color: #111111;
   margin-bottom: 5px;
 }
 
 .cv-subtitle {
   font-size: 0.95rem;
   font-style: italic;
-  color: #666;
+  color: #666666;
   margin-bottom: 20px;
 }
 
@@ -461,11 +463,12 @@ body {
   border-bottom: none;
 }
 
+/* Configurazione anti-sovrapposizione e incolonnamento delle date */
 .cv-date {
   font-weight: 600;
-  color: #3d2a1d;           /* MODIFICATO: Marrone scuro caldo al posto del vecchio blu */
-  min-width: 160px;         /* MODIFICATO: Larghezza fissa minima per incolonnare le date */
-  margin-right: 20px;       /* MODIFICATO: Margine destro di sicurezza (RISOLVE IL TESTO ATTACCATO) */
+  color: #3d2a1d;           /* Marrone scuro caldo al posto del vecchio blu */
+  min-width: 160px;         /* Larghezza fissa minima per incolonnare le date */
+  margin-right: 20px;       /* Margine destro di sicurezza (RISOLVE IL TESTO ATTACCATO) */
   flex-shrink: 0;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -473,17 +476,17 @@ body {
 }
 
 .cv-detail {
-  color: #333;
+  color: #333333;
 }
 
 .cv-detail strong {
-  color: #000;
+  color: #000000;
 }
 
 /* RESPONSIVE PER SMARTPHONE E TABLET */
 @media (max-width: 850px) {
   .bio-hero-section {
-    flex-direction: column-reverse; /* MODIFICATO: Incolonna prima la foto profilo sui telefoni */
+    flex-direction: column-reverse; /* Incolonna prima la foto profilo sui telefoni */
     gap: 30px;
   }
   .bio-hero-image {
@@ -497,6 +500,6 @@ body {
     min-width: auto;
   }
   .bio-paragraph {
-    text-align: left;       /* NUOVO: Disattiva il giustificato sui telefoni per evitare spazi anomali */
+    text-align: left;       /* Disattiva il giustificato sui telefoni per evitare spazi anomali */
   }
 }
