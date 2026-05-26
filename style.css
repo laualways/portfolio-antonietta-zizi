@@ -503,3 +503,163 @@ body {
     text-align: left;       /* Disattiva il giustificato sui telefoni per evitare spazi anomali */
   }
 }
+
+/* ==========================================================================
+   PAGINA GALLERIA - GRIGLIA GEOMETRICA E EFFETTI ARTISTICI
+   ========================================================================== */
+
+/* Introduzione della galleria */
+.gallery-intro {
+  text-align: center;
+  padding: 60px 0 20px 0;
+}
+
+.gallery-intro h2 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: #111111;
+  margin-bottom: 15px;
+}
+
+.gallery-lead {
+  font-size: 1.1rem;
+  color: #666666;
+  max-width: 800px; /* Stringe il testo centralmente per farlo leggere meglio */
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Blocchi macro delle categorie */
+.gallery-category-block {
+  padding: 40px 0;
+}
+
+/* Intestazione della categoria con linea decorativa laterale di stile minimal */
+.category-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.category-header h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #3d2a1d; /* Marrone Testa di Moro Istituzionale */
+  white-space: nowrap; /* Impedisce al titolo di andare a capo */
+}
+
+.category-line {
+  flex: 1;
+  height: 1px;
+  background-color: #d4af37; /* Sottile linea color oro protettiva */
+  opacity: 0.4;
+}
+
+/* Il Motore della Griglia Geometrica Pulita (3 colonne perfette) */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Crea 3 colonne identiche */
+  gap: 30px; /* Spazio geometrico fisso tra le opere */
+}
+
+/* Il singolo elemento opera */
+.gallery-item {
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  padding: 10px; /* Crea una leggera intercapedine bianca attorno alla foto */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.3s ease;
+}
+
+/* La scatola di contenimento della foto (gestisce l'effetto zoom) */
+.art-img-box {
+  position: relative;
+  width: 100%;
+  height: 280px; /* ALTEZZA FISSA: Forza la geometria millimetrica della scacchiera */
+  overflow: hidden; /* Taglia lo zoom dell'immagine quando esce dai bordi */
+  border: 1px solid #d4af37; /* Mini cornice dorata istituzionale */
+}
+
+.art-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Adatta l'opera alla geometria senza schiacciarla mai */
+  transition: transform 0.5s ease; /* Rende lo zoom fluidissimo */
+}
+
+/* Velo scuro che appare sopra la foto al passaggio del mouse */
+.art-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Scurisce lo sfondo del 40% */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* Invisibile all'inizio */
+  transition: opacity 0.3s ease;
+}
+
+/* Scritta decorativa dentro il velo scuro */
+.art-zoom-text {
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  border: 1px solid #ffffff;
+  padding: 8px 16px;
+  text-transform: uppercase;
+}
+
+/* === ATTIVAZIONE EFFETTI AL PASSAGGIO MOUSE (HOVER) === */
+.gallery-item:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08); /* L'intera scatola si solleva visivamente */
+}
+
+.gallery-item:hover .art-img-box img {
+  transform: scale(1.08); /* TRUCCO: Micro-zoom interno del 8% per dare profondità */
+}
+
+.gallery-item:hover .art-overlay {
+  opacity: 1; /* Mostra il velo scuro e la scritta */
+}
+
+/* Didascalie sotto le immagini della griglia */
+.art-details {
+  padding: 15px 5px 5px 5px;
+}
+
+.art-details h4 {
+  font-size: 1.1rem;
+  color: #111111;
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+
+.art-meta {
+  font-size: 0.9rem;
+  color: #666666;
+  font-style: italic;
+}
+
+/* RESPONSIVE PER LA GRIGLIA (Smartphones e Tablet) */
+@media (max-width: 900px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr); /* Sui tablet la scacchiera diventa a 2 colonne */
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Sui telefoni le opere si incolonnano singolarmente */
+  }
+  .art-img-box {
+    height: 320px; /* Diamo più respiro verticale sui telefoni */
+  }
+  .gallery-intro h2 {
+    font-size: 2.1rem;
+  }
+}
