@@ -663,3 +663,156 @@ body {
     font-size: 2.1rem;
   }
 }
+
+/* ==========================================================================
+   PAGINA CONTATTI - ASSETTO ASIMMETRICO E STILE INPUT
+   ========================================================================== */
+
+/* Il contenitore che divide lo spazio in 2 colonne (Info a sinistra, Form a destra) */
+.contacts-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10%; /* Ampio spazio tra le due colonne per dare respiro */
+  padding: 60px 0;
+}
+
+/* Colonna info sinistra */
+.contacts-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contacts-info h2 {
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: #111111;
+}
+
+.contacts-lead {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #666666;
+}
+
+/* Contenitore dei blocchetti verticali */
+.info-blocks-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 15px;
+}
+
+.info-block {
+  border-left: 2px solid #d4af37; /* Linea verticale d'oro istituzionale */
+  padding-left: 15px;
+}
+
+.info-label {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #3d2a1d; /* Marrone Testa di Moro */
+  font-weight: 600;
+  margin-bottom: 3px;
+}
+
+.info-value {
+  font-size: 1.1rem;
+  color: #333333;
+}
+
+.info-value a {
+  color: #333333;
+  text-decoration: none;
+  border-bottom: 1px solid #d4af37; /* Sottolineatura dorata sui link */
+  transition: color 0.3s ease;
+}
+
+.info-value a:hover {
+  color: #000000;
+}
+
+/* Colonna modulo destra (La scatola del Form) */
+.contacts-form-box {
+  flex: 1.2; /* Diamo un briciolo di spazio in più alla colonna del form */
+  background-color: #ffffff;
+  padding: 40px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.art-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Spazio geometrico tra un campo e l'altro */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Spazio tra la scritta Label e la casella di testo */
+}
+
+.form-group label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* Stile per i campi di input e la textarea */
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  font-family: sans-serif;
+  font-size: 1rem;
+  background-color: #fafafa;
+  border: 1px solid #d1d5db;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Effetto quando l'utente clicca dentro una casella (Focus) */
+.form-group input:focus,
+.form-group textarea:focus {
+  background-color: #ffffff;
+  border-color: #3d2a1d; /* Il bordo diventa Marrone scuro istituzionale */
+  box-shadow: 0 0 0 3px rgba(61, 42, 29, 0.05); /* Morbida aureola di focus */
+}
+
+/* Bottone di invio pieno (Stile istituzionale ad alto contrasto) */
+.btn-submit {
+  background-color: #3d2a1d; /* Sfondo Marrone Testa di Moro */
+  color: #ffffff;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  align-self: flex-start; /* Non fa allargare il bottone a tutto schermo */
+  transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+  background-color: #000000; /* Diventa nero lucido al passaggio del mouse */
+}
+
+/* RESPONSIVE PER SMARTPHONE E TABLET */
+@media (max-width: 850px) {
+  .contacts-wrapper {
+    flex-direction: column; /* Incolonna le info e il modulo sui telefoni */
+    gap: 40px;
+  }
+  .contacts-form-box {
+    width: 100%;
+    padding: 25px 20px; /* Riduce i pad interni sui piccoli schermi */
+  }
+  .btn-submit {
+    width: 100%; /* Il bottone prende tutta la larghezza sui telefoni per comodità di tocco */
+    text-align: center;
+  }
+}

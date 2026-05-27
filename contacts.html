@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antonietta Zizi</title>
+    <title>Contatti - Antonietta Zizi</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -23,5 +23,67 @@
         </nav>
     </header>
 
+    <div class="page-container">
+        
+        <section class="contacts-wrapper">
+            
+            <div class="contacts-info">
+                <h2>Mettiamoci in Contatto</h2>
+                <p class="contacts-lead">
+                    Disponibile per commissioni private, progetti di muralismo pubblico, interventi di restauro conservativo su beni sacri o visite su appuntamento presso l'atelier.
+                </p>
+                
+                <div class="info-blocks-container">
+                    <div class="info-block">
+                        <span class="info-label">Posizione ed Atelier</span>
+                        <p class="info-value">Nuoro, Sardegna — Italia</p>
+                    </div>
+                    
+                    <div class="info-block">
+                        <span class="info-label">Richieste e Informazioni</span>
+                        <p class="info-value"><a href="mailto:info@antoniettazizi.it">info@antoniettazizi.it</a></p>
+                    </div>
+                    
+                    <div class="info-block">
+                        <span class="info-label">Contatto Diretto</span>
+                        <p class="info-value">+39 3XX XXX XXXX</p> 
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contacts-form-box">
+                <form action="#" method="POST" class="art-form">
+                    <div class="form-group">
+                        <label for="name">Nome e Cognome</label>
+                        <input type="text" id="name" name="name" placeholder="Inserisci il tuo nome" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Indirizzo Email</label>
+                        <input type="email" id="email" name="email" placeholder="esempio@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Oggetto della richiesta</label>
+                        <input type="text" id="subject" name="subject" placeholder="Es. Informazioni per quadro / Progetto Murales">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Il tuo messaggio</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Scrivi qui i dettagli della tua richiesta..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">Invia Messaggio</button>
+                </form>
+            </div>
+
+        </section>
+
+    </div>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Antonietta Zizi. Tutti i diritti riservati.</p>
+        <p class="footer-warning">Tutte le opere d'arte sono soggette a copyright e proprietà intellettuale dell'artista.</p>
+    </footer>
 </body>
 </html>
