@@ -6,7 +6,11 @@ The architecture of this project departs from generic templates to embrace a str
 
 ## 🚀 Live Demo
 🚧 **Project Status:** Under Active Refinement (Production Phase)  
+<<<<<<< HEAD
 🔗 **Live Link:** `*https://antoniettazizi.netlify.app/`
+=======
+🔗 • Live Demo: [Visit Live Site](https://antoniettazizi.netlify.app/)
+>>>>>>> 020e6fe (docs: update live demo link for antonietta zizi portfolio)
 
 ---
 
