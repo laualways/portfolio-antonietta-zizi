@@ -35,6 +35,9 @@ Even without relying on JavaScript, this project serves as a showcase of semanti
 ## 📂 Page Architecture
 
 ```text
-├── index.html         # Main Monograph Portal & Biography (Completed & Production-Ready)
-├── gallery.html       # Fine Art Portfolio Matrix (Under Active Layout Development)
-└── contacts.html      # Artist Inquiries & Institutional Links (In Progress)
+├── index.html        # Main Monograph Portal
+├── biography.html    # Artist Biography & Professional Path
+├── gallery.html      # Fine Art Portfolio Matrix
+├── contacts.html     # Artist Inquiries & Institutional Links
+├── style.css         # Global Stylesheet
+└── images/           # Assets & Art Catalog Images
